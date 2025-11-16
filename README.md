@@ -10,7 +10,7 @@
 
 ### 🎓 A Decentralized, Immutable Attendance Tracking System Using Multi-Layer Blockchain Architecture
 
-[🚀 Live Demo](https://blockchain-attendance-frontend.onrender.com) | [📖 Documentation](#-api-documentation) | [🎯 Features](#-features) | [⚙️ Installation](#-installation)
+[🚀 Live Demo](https://blockchain-based-attendance-management-zwd6.onrender.com/) | [📖 Documentation](#-api-documentation) | [🎯 Features](#-features) | [⚙️ Installation](#-installation)
 
 </div>
 
@@ -641,7 +641,7 @@ This project was developed as part of a blockchain course assignment, demonstrat
 
 ## 📞 Support & Contact
 
-- 📧 **Email**: [Your Email]
+- 📧 **Email**: [faizanafzaal868@gmail.com]
 - 🐛 **Issues**: [GitHub Issues](https://github.com/FAIZAN-Bor/Blockchain-Based-Attendance-Management-System-BAMS-/issues)
 - 💬 **Discussions**: [GitHub Discussions](https://github.com/FAIZAN-Bor/Blockchain-Based-Attendance-Management-System-BAMS-/discussions)
 - 📖 **Documentation**: [Wiki](https://github.com/FAIZAN-Bor/Blockchain-Based-Attendance-Management-System-BAMS-/wiki)
@@ -660,7 +660,7 @@ If you find this project useful or interesting, please consider giving it a ⭐�
 
 ### 🔗 Quick Links
 
-[🚀 Live Demo](https://blockchain-attendance-frontend.onrender.com) • 
+[🚀 Live Demo](https://blockchain-based-attendance-management-zwd6.onrender.com/) • 
 [📖 Documentation](./DEPLOYMENT_GUIDE.md) • 
 [🐛 Report Bug](https://github.com/FAIZAN-Bor/Blockchain-Based-Attendance-Management-System-BAMS-/issues) • 
 [✨ Request Feature](https://github.com/FAIZAN-Bor/Blockchain-Based-Attendance-Management-System-BAMS-/issues)
