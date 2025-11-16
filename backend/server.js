@@ -80,20 +80,21 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+const HOST = process.env.HOST || '0.0.0.0';
+app.listen(PORT, HOST, () => {
   console.log(`
 ╔═══════════════════════════════════════════════════════════════╗
 ║   Blockchain-Based Attendance Management System (BAMS)       ║
-║   Server running on port ${PORT}                                 ║
+║   Server running on ${HOST}:${PORT}                            ║
 ║   Environment: ${process.env.NODE_ENV || 'development'}                              ║
 ║                                                               ║
 ║   API Documentation:                                          ║
-║   - Departments: http://localhost:${PORT}/api/departments         ║
-║   - Classes:     http://localhost:${PORT}/api/classes             ║
-║   - Students:    http://localhost:${PORT}/api/students            ║
-║   - Attendance:  http://localhost:${PORT}/api/attendance          ║
-║   - Blockchain:  http://localhost:${PORT}/api/blockchain          ║
-║   - Health:      http://localhost:${PORT}/api/health              ║
+║   - Departments: /api/departments                             ║
+║   - Classes:     /api/classes                                 ║
+║   - Students:    /api/students                                ║
+║   - Attendance:  /api/attendance                              ║
+║   - Blockchain:  /api/blockchain                              ║
+║   - Health:      /api/health                                  ║
 ╚═══════════════════════════════════════════════════════════════╝
   `);
 });
