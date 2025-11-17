@@ -80,13 +80,14 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
-const HOST = process.env.HOST || '0.0.0.0';
+const HOST = '0.0.0.0'; // Render requires explicit 0.0.0.0 binding
 app.listen(PORT, HOST, () => {
   console.log(`
 ╔═══════════════════════════════════════════════════════════════╗
 ║   Blockchain-Based Attendance Management System (BAMS)       ║
 ║   Server running on ${HOST}:${PORT}                            ║
 ║   Environment: ${process.env.NODE_ENV || 'development'}                              ║
+║   Ready to accept connections                                 ║
 ║                                                               ║
 ║   API Documentation:                                          ║
 ║   - Departments: /api/departments                             ║
@@ -97,6 +98,7 @@ app.listen(PORT, HOST, () => {
 ║   - Health:      /api/health                                  ║
 ╚═══════════════════════════════════════════════════════════════╝
   `);
+  console.log(`✅ Server successfully bound to port ${PORT}`);
 });
 
 module.exports = app;
