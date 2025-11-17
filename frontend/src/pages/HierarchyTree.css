@@ -1,0 +1,256 @@
+.hierarchy-tree-page {
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.hierarchy-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tree-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tree-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tree-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tree-container {
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+}
+
+.tree-node {
+  margin-bottom: 0.5rem;
+}
+
+.node-header {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+}
+
+.node-header:hover {
+  background: #f9fafb;
+}
+
+.node-header.selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.node-expand {
+  margin-right: 0.5rem;
+  margin-top: 0.25rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.node-content {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.dept-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.class-icon {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.student-icon {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.node-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.node-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.node-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dept-badge {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+.class-badge {
+  background: rgba(240, 147, 251, 0.2);
+  color: #f5576c;
+}
+
+.student-badge {
+  background: rgba(79, 172, 254, 0.2);
+  color: #4facfe;
+}
+
+.validation-icon {
+  font-size: 0.9rem;
+}
+
+.validation-icon.valid {
+  color: #10b981;
+}
+
+.validation-icon.invalid {
+  color: #ef4444;
+}
+
+.node-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.node-hash {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.node-children {
+  margin-left: 2.5rem;
+  border-left: 2px solid #e5e7eb;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.more-node {
+  padding: 0.5rem 1rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.details-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.details-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.details-placeholder {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #9ca3af;
+}
+
+.detail-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #667eea;
+}
+
+.detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.detail-section h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.detail-table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.detail-table td {
+  padding: 0.5rem 0;
+  vertical-align: top;
+}
+
+.detail-table td:first-child {
+  width: 40%;
+  color: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .hierarchy-content {
+    grid-template-columns: 1fr;
+  }
+
+  .details-section {
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+
+  .tree-stats {
+    flex-direction: column;
+  }
+}

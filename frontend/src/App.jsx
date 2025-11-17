@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { FaLink, FaHome, FaBuilding, FaChalkboardTeacher, FaUserGraduate, FaClipboardCheck, FaCubes } from 'react-icons/fa';
+import { FaLink, FaHome, FaBuilding, FaChalkboardTeacher, FaUserGraduate, FaClipboardCheck, FaCubes, FaSitemap } from 'react-icons/fa';
 
 // Import pages
 import Dashboard from './pages/Dashboard';
@@ -9,6 +9,7 @@ import Classes from './pages/Classes';
 import Students from './pages/Students';
 import Attendance from './pages/Attendance';
 import BlockchainExplorer from './pages/BlockchainExplorer';
+import HierarchyTree from './pages/HierarchyTree';
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -78,6 +79,15 @@ function App() {
                   <FaCubes /> Blockchain Explorer
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/hierarchy"
+                  className={`nav-link ${activeTab === 'hierarchy' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('hierarchy')}
+                >
+                  <FaSitemap /> Hierarchy Tree
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -91,6 +101,7 @@ function App() {
             <Route path="/students" element={<Students />} />
             <Route path="/attendance" element={<Attendance />} />
             <Route path="/blockchain" element={<BlockchainExplorer />} />
+            <Route path="/hierarchy" element={<HierarchyTree />} />
           </Routes>
         </main>
       </div>
